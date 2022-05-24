@@ -14,6 +14,7 @@ Our implementation is based on [AA-FIB](https://github.com/CORE-SNU/AA-FIB.git) 
 - **ale-py**
 - **[Mujoco](https://github.com/openai/mujoco-py#install-mujoco)**
 - **[Mujoco-py](https://github.com/openai/mujoco-py.git)**
+
 For detailed installation instructions for Atari and Mujoco, follow prerequisites from [Dopamine](https://github.com/google/dopamine.git).
 
 
