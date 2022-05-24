@@ -8,8 +8,8 @@ This repository includes an official python implementation of the **Safeguarded 
 ## 1. Requirements
 Our implementation is based on [AA-FIB](https://github.com/CORE-SNU/AA-FIB.git) and [RAA](https://github.com/shiwj16/raa-drl), and followings must be installed to run our implementation:
 - **Python (>=3.7)**
-- **[PyTorch][Pytorch]**
-- **[OpenAI Gym <= 0.12.1][Gym]**
+- **PyTorch**
+- **[OpenAI Gym <= 0.12.1](https://github.com/openai/gym.git)**
 - **[Atari-py](https://github.com/openai/atari-py.git)**
 - **ale-py**
 - **[Mujoco](https://github.com/openai/mujoco-py#install-mujoco)**
