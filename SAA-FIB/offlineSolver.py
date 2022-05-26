@@ -18,34 +18,15 @@ class OfflineSolver:
         self.precision = precision
         self.fixed_prior = self.pomdp.prior
 
-    def solve(self, max_iter = 251):
+    def _eval(self, max_iter = 251):
         """
         solve and calulcate the total reward for one run
         """
-        
-        #To generate random prior each time solving pomdp
-        
-        rand_prior = np.random.random(len(self.pomdp.prior))
-        rand_prior /= rand_prior.sum()
-
-        ent = entropy(rand_prior, base=2)
-
         total_reward = 0
         environment = Environment(self.pomdp)
         time_step = 0
-        '''
-        R = dok_matrix((self.a_num, self.s_num))
-        for key, val in self.pomdp.R.items():
-            R[key[0], key[1]] = val
-        rewards = R.toarray()
-        max_abs_reward = np.max(np.abs(rewards))
-        '''
-        
-        #cur_belief = np.array(self.pomdp.prior).reshape(1, len(self.pomdp.prior))
-        #cur_belief = rand_prior
+
         cur_belief = self.pomdp.prior
-        
-        #print('Inital belief (for 5 states) : {}'.format(cur_belief[:5]))
 
         # Rollout trajectory
         while time_step < max_iter:
@@ -77,7 +58,6 @@ class OfflineSolver:
         return total_reward
 
     def evaluate(self, rand_init=False, num_runs=251):
-        #rand_init, num_runs = arg
         sum_reward, curr_reward = 0, 0
         reward_epi = np.zeros(num_runs)
 
@@ -91,12 +71,9 @@ class OfflineSolver:
         else:
             print('Randomized initial belief: False')
             self.pomdp.prior = self.fixed_prior
-        print('Initial prior entropy : %.3f bit'%(entropy(self.pomdp.prior, base=2)))
-        
-        # Average over 251 runs - due to stochastic effect
+
         for j in range(num_runs):
-            # maxiumum 251 steps
-            curr_reward = self.solve(max_iter=num_runs)   # Get discounted return
+            curr_reward = self._eval(max_iter=num_runs)   # Get discounted return
             sum_reward += curr_reward
             reward_epi[j-1] = curr_reward
              
