@@ -24,7 +24,7 @@ python main.py --safeguard safe_local --safeguard_coeff 100 --do_eval
 
 
 ### AA-sFIB
-Try solving a simple example problem under the `./SAA-FIB` directory with:
+To use AA-sFIB solver, run the following:
 ```
 cd ./SAA-FIB
 python main.py --safeguard safe_local --safeguard_coeff 100 --do_eval
@@ -42,4 +42,4 @@ We provide the following arguments for AA-sFIB experiments
 - safeguard_coeff : m for target optimization gain
 - do_eval : flag to run evaluation (this may induce large computation time)
 
-
+For the reproduction of the results reported in the paper, run the bash script `run.sh`.
