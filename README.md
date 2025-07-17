@@ -1,12 +1,12 @@
 Safeguarded Anderson Acceleration for Regularized Bellman Iterations
 ====================================================
 
-This repository includes an official python implementation of the **Safeguarded Anderson Acceleration** presented in **[Anderson acceleration for partially observable Markov decision processes: A maximum entropy approach](https://www.sciencedirect.com/science/article/abs/pii/S0005109824000499)**
+This repository includes an official Python implementation of the **Anderson-accelerated soft POMDP solvers** presented in **[Anderson acceleration for partially observable Markov decision processes: A maximum entropy approach](https://www.sciencedirect.com/science/article/abs/pii/S0005109824000499)**.
 
 
 
 ## 1. Requirements
-Our implementation is based on [AA-FIB](https://github.com/CORE-SNU/AA-FIB.git) and [RAA](https://github.com/shiwj16/raa-drl), and followings must be installed to run our implementation:
+Our implementation is built upon [AA-FIB](https://github.com/CORE-SNU/AA-FIB.git) and [RAA](https://github.com/shiwj16/raa-drl). Furthermore, the following must be installed to run our implementation:
 - **Python (>=3.7)**
 - **PyTorch**
 - **[OpenAI Gym <= 0.12.1](https://github.com/openai/gym.git)**
@@ -15,18 +15,18 @@ Our implementation is based on [AA-FIB](https://github.com/CORE-SNU/AA-FIB.git) 
 - **[Mujoco](https://github.com/openai/mujoco-py#install-mujoco)**
 - **[Mujoco-py](https://github.com/openai/mujoco-py.git)**
 
-For detailed installation instructions for Atari and Mujoco, follow prerequisites from [Dopamine](https://github.com/google/dopamine.git).
+For detailed installation instructions for Atari and Mujoco, follow the prerequisites from [Dopamine](https://github.com/google/dopamine.git).
 
 
 
 
 ## 2. Quick Start
-First, clone our repository with:
+First, clone our repository by running:
 ```
 git clone https://github.com/CORE-SNU/MPC-PEARL.git
 ```
 ### 2.1 sAA-FIB
-Try solving simple example problem under the `./SAA-FIB` directory with:
+Try solving a simple example problem under the `./SAA-FIB` directory with:
 ```
 python main.py --safeguard safe_local --safeguard_coeff 100 --do_eval
 ```
