@@ -6,7 +6,7 @@ This repository includes an official Python implementation of the **Anderson-acc
 
 
 ## 1. Requirements
-Our implementation is built upon [AA-FIB](https://github.com/CORE-SNU/AA-FIB.git). This requires a minimum installation of extra dependencies, such as **numpy** and **scipy**.
+This repository is built upon our previous implementation of [AA-FIB](https://github.com/CORE-SNU/AA-FIB.git). This requires a minimum installation of extra dependencies, such as **numpy** and **scipy**.
 We have successfully run our code on Ubuntu 18.04, Python 3.7.4.
 
 
@@ -15,27 +15,31 @@ First, clone our repository by running:
 ```
 git clone https://github.com/CORE-SNU/AA-POMDP.git
 ```
+### AA-sQMDP
+To use AA-sQMDP solver, run the following:
+```
+cd ./SAA-QMDP
+python main.py --safeguard safe_local --safeguard_coeff 100 --do_eval
+```
+
+
 ### AA-sFIB
 Try solving a simple example problem under the `./SAA-FIB` directory with:
 ```
+cd ./SAA-FIB
 python main.py --safeguard safe_local --safeguard_coeff 100 --do_eval
 ```
 
 
 
 ## 3. Solve/Evaluate
-We provide the following arguments for sAA-FIB experiments
+We provide the following arguments for AA-sFIB experiments
 - env_name : select the POMDP to be solved (among the files under `examples/env`)
 - num_trials : number of different initializations
 - max_type : standard / mellowmax / logsumexp
-- softmax_param: $\lambda$ / $\tau$ for the regularized FIB
+- softmax_param: $\lambda$ / $\tau$ for the sFIB
 - safeguard : strict (strict safeguard), safe_global (loose safeguard), safe_local (target optimization gain)
 - safeguard_coeff : m for target optimization gain
 - do_eval : flag to run evaluation (this may induce large computation time)
 
 
-
-The training history is stored under the `./logs` directory.
-Moreover, we provide random seeds for reproduction.
-- For discrete control tasks, we used seeds 101 ~ 105
-- For continuous control tasks, we used seeds 101 ~ 108
