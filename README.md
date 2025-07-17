@@ -6,18 +6,14 @@ This repository includes an official Python implementation of the **Anderson-acc
 
 
 ## 1. Requirements
-Our implementation is built upon [AA-FIB](https://github.com/CORE-SNU/AA-FIB.git). Our implementation requires a minimum installation of extra dependencies, such as **numpy** and **scipy**.
-
-
-For detailed installation instructions for Atari and Mujoco, follow the prerequisites from [Dopamine](https://github.com/google/dopamine.git).
-
-
+Our implementation is built upon [AA-FIB](https://github.com/CORE-SNU/AA-FIB.git). This requires a minimum installation of extra dependencies, such as **numpy** and **scipy**.
+We have successfully run our code on Ubuntu 18.04, Python 3.7.4.
 
 
 ## 2. Quick Start
 First, clone our repository by running:
 ```
-git clone https://github.com/CORE-SNU/MPC-PEARL.git
+git clone https://github.com/CORE-SNU/AA-POMDP.git
 ```
 ### AA-sFIB
 Try solving a simple example problem under the `./SAA-FIB` directory with:
@@ -29,7 +25,7 @@ python main.py --safeguard safe_local --safeguard_coeff 100 --do_eval
 
 ## 3. Solve/Evaluate
 We provide the following arguments for sAA-FIB experiments
-- env_name : select the POMDP to be solved (among the files under examples/env)
+- env_name : select the POMDP to be solved (among the files under `examples/env`)
 - num_trials : number of different initializations
 - max_type : standard / mellowmax / logsumexp
 - softmax_param: $\lambda$ / $\tau$ for the regularized FIB
