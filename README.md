@@ -1,4 +1,4 @@
-Safeguarded Anderson Acceleration for Regularized Bellman Iterations
+Anderson-Accelerated Soft POMDP Solvers
 ====================================================
 
 This repository includes an official Python implementation of the **Anderson-accelerated soft POMDP solvers** presented in **[Anderson acceleration for partially observable Markov decision processes: A maximum entropy approach](https://www.sciencedirect.com/science/article/abs/pii/S0005109824000499)**.
