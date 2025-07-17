@@ -1,7 +1,7 @@
 Safeguarded Anderson Acceleration for Regularized Bellman Iterations
 ====================================================
 
-This repository includes an official python implementation of the **Safeguarded Anderson Acceleration** presented in **Safeguarded Anderson Acceleration for Regularized Bellman Iterations**
+This repository includes an official python implementation of the **Safeguarded Anderson Acceleration** presented in **[Anderson acceleration for partially observable Markov decision processes: A maximum entropy approach](https://www.sciencedirect.com/science/article/abs/pii/S0005109824000499)**
 
 
 
