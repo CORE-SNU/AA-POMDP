@@ -1,0 +1,3 @@
+[submodule "sarsop"]
+	path = sarsop
+	url = https://github.com/AdaCompNUS/sarsop.git
